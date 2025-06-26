@@ -1,0 +1,61 @@
+{
+  "name": "n8n-nodes-portainer",
+  "version": "2.0.0",
+  "description": "Nó personalizado do n8n para integração completa com API Portainer 2.27.8 - Cobertura 100% com 21 recursos e 150+ operações incluindo Docker Containers, Images, Services, Swarm, Networks, Volumes, Stacks, Secrets, Configs, Nodes, Templates, Registries, Teams, Settings, Webhooks, Edge Computing e System",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "portainer",
+    "docker",
+    "containers",
+    "workflow"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ramonmatias19/n8n-nodes-portainer",
+  "author": {
+    "name": "Ramon Matias",
+    "email": "contato@lumiaria.com.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramonmatias19/n8n-nodes-portainer.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -s",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "release": "npm run release:patch"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/PortainerApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Portainer/Portainer.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-n8n-nodes-base": "^1.11.0",
+    "gulp": "^4.0.2",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+} 

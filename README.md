@@ -1,328 +1,458 @@
 # n8n-nodes-portainer
 
-[![npm version](https://badge.fury.io/js/n8n-nodes-portainer.svg)](https://badge.fury.io/js/n8n-nodes-portainer)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![n8n Community Node](https://img.shields.io/badge/n8n-Community%20Node-ff4646.svg)](https://n8n.io/integrations/)
+<p align="center"><br>
+Este Community Node é uma solução 100% gratuita, criada com o intuito de simplificar e auxiliar toda a comunidade a integrar e utilizar ao máximo os principais recursos oferecidos pelo <b>Portainer</b> em seus projetos no N8N.
+</p>
+<br>
+	
+<div align="center">
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2Flast-year%2Fn8n-nodes-portainer&query=downloads&style=for-the-badge&label=Total%20de%20Downloads&labelColor=%230d1117&color=%23359514&cacheSeconds=30&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fn8n-nodes-portainer" alt="Downloads Badge">
+  <img src="https://img.shields.io/npm/v/n8n-nodes-portainer?style=for-the-badge&label=Versão&labelColor=%230d1117&color=%23007ACC" alt="Version Badge">
+  <img src="https://img.shields.io/npm/l/n8n-nodes-portainer?style=for-the-badge&label=Licença&labelColor=%230d1117&color=%23FFA500" alt="License Badge">
+</div>
+<br>
 
-Um custom node n8n para integração completa com o Portainer API 2.27.8. Este node oferece **cobertura 100%** da API oficial do Portainer, permitindo automação completa de containers Docker, Docker Swarm, edge computing e muito mais.
+<p align="center">
+  <a href="mailto:contato@lumiaria.com.br"><img src="https://img.shields.io/badge/Email-Suporte-red?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>     
+  <a href="https://github.com/ramonmatias19/n8n-nodes-portainer"><img src="https://img.shields.io/badge/GitHub-Repositório-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>     
+  <a href="https://www.npmjs.com/package/n8n-nodes-portainer"><img src="https://img.shields.io/badge/NPM-Package-red?style=for-the-badge&logo=npm&logoColor=white" alt="NPM"></a>
+</p>
 
-## 🚀 Recursos Principais
+> **Aviso:** Este node foi desenvolvido de forma independente para facilitar integrações com a API pública do Portainer no n8n.  
+> Não é afiliado, endossado ou mantido pelo Portainer.  
+> Todas as marcas citadas pertencem aos seus respectivos proprietários.
 
-### ✅ **Cobertura 100% da API Portainer 2.27.8**
-- **21 recursos principais** com **160+ operações** específicas
-- **80+ parâmetros** de configuração detalhada
-- Suporte completo para Docker, Docker Swarm e Edge Computing
-- Operações avançadas de gerenciamento de infraestrutura
+<h1></h1>
 
-### 🐳 **Docker & Containers**
-- **Containers (13 operações)**: Criar, deletar, executar comandos, obter logs, estatísticas, pausar/despausar, reiniciar
-- **Images (9 operações)**: Build, pull, push, tag, histórico, inspeção
-- **Volumes & Networks (4 operações)**: Listagem e exclusão completa
-- **Registries (5 operações)**: Suporte a DockerHub, ECR, Azure, GitLab, Quay.io
+<h3>⚙️ Requisitos</h3>
 
-### 🔄 **Docker Swarm**
-- **Services (7 operações)**: Criação, escalonamento, atualização, logs
-- **Secrets & Configs (10 operações)**: Gerenciamento completo de segredos e configurações
-- **Nodes (4 operações)**: Gerenciamento de nós Swarm, inspeção e atualizações
-- **Stacks (4 operações)**: Deployment e gerenciamento de stacks
+Para utilizar o nosso **Community Node**, é necessário atender aos seguintes requisitos:  
+- **N8N** na versão **1.54.4** ou superior  
+- **Node.js** na versão **16.0.0** ou superior  
+- **Conta ativa** no **Portainer** com token de API  
 
-### 🌐 **Edge Computing**
-- **Edge Groups (5 operações)**: Grupos dinâmicos e estáticos
-- **Edge Stacks (6 operações)**: Deployment distribuído com status monitoring
-- Suporte completo para arquiteturas distribuídas
+<h1></h1>
 
-### 👥 **Administração**
-- **Users & Teams (7 operações)**: Gerenciamento completo de usuários e equipes
-- **Templates (2 operações)**: Acesso a templates de aplicação
-- **Settings (2 operações)**: Configurações de autenticação, políticas de segurança
-- **Webhooks (3 operações)**: Automação com webhooks
-- **System (3 operações)**: Status, versão e informações do sistema
+<h3>📌 Recursos Disponíveis</h3>
 
-## 📦 Instalação
+<h3>🐳 Containers</h3>
+📝 Gerenciamento completo de containers Docker com operações avançadas de criação, execução, monitoramento e controle de ciclo de vida.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novos containers</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar containers</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Exec</b> - Executar comandos nos containers</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do container</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Logs</b> - Obter logs do container</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os containers</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Stats</b> - Obter estatísticas de uso</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Inspect</b> - Inspecionar detalhes do container</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Pause</b> - Pausar containers em execução</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Restart</b> - Reiniciar containers</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Start</b> - Iniciar containers parados</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Stop</b> - Parar containers em execução</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Unpause</b> - Despausar containers pausados</summary>
+	</details>
+</details>
 
-### Instalar via npm
+<h3>🖼️ Images</h3>
+📝 Gerenciamento completo de imagens Docker incluindo build, pull, push, tag e análise de histórico para controle total do ciclo de vida das imagens.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Build</b> - Construir imagens a partir de Dockerfile</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar imagens</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas da imagem</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get History</b> - Obter histórico da imagem</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todas as imagens</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Inspect</b> - Inspecionar detalhes da imagem</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Pull</b> - Baixar imagens do registry</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Push</b> - Enviar imagens para o registry</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Tag</b> - Criar tags para imagens</summary>
+	</details>
+</details>
 
+<h3>⚙️ Services (Docker Swarm)</h3>
+📝 Gerenciamento completo de services Docker Swarm com criação, escalonamento, atualização e monitoramento para orquestração de containers distribuídos.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novos services</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar services</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do service</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Logs</b> - Obter logs do service</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os services</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Scale</b> - Escalar number de réplicas</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Update</b> - Atualizar configurações do service</summary>
+	</details>
+</details>
+
+<h3>🔐 Secrets (Docker Swarm)</h3>
+📝 Gerenciamento seguro de secrets Docker Swarm para armazenamento e distribuição segura de informações sensíveis nos services.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novos secrets</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar secrets</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do secret</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os secrets</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Inspect</b> - Inspecionar detalhes do secret</summary>
+	</details>
+</details>
+
+<h3>📋 Configs (Docker Swarm)</h3>
+📝 Gerenciamento de configs Docker Swarm para distribuição de arquivos de configuração e dados não-sensíveis aos services do cluster.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novos configs</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar configs</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do config</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os configs</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Inspect</b> - Inspecionar detalhes do config</summary>
+	</details>
+</details>
+
+<h3>🌐 Edge Groups</h3>
+📝 Gerenciamento de grupos de edge computing para organização e controle centralizado de endpoints distribuídos geograficamente.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novos grupos de edge</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar grupos de edge</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do grupo</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os grupos de edge</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Update</b> - Atualizar configurações do grupo</summary>
+	</details>
+</details>
+
+<h3>📦 Edge Stacks</h3>
+📝 Gerenciamento de stacks de edge computing para deployment distribuído de aplicações em múltiplas localizações edge.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novos stacks de edge</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar stacks de edge</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do stack</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os stacks de edge</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Status</b> - Obter status de deployment</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Update</b> - Atualizar configurações do stack</summary>
+	</details>
+</details>
+
+<h3>🖥️ Nodes (Docker Swarm)</h3>
+📝 Gerenciamento de nodes Docker Swarm para monitoramento e controle dos nós do cluster, incluindo status e configurações.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do node</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os nodes</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Inspect</b> - Inspecionar detalhes do node</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Update</b> - Atualizar configurações do node</summary>
+	</details>
+</details>
+
+<h3>📚 Stacks (Docker Compose)</h3>
+📝 Gerenciamento de stacks Docker Compose para deployment e atualização de aplicações multi-container definidas em arquivos YAML.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar stacks</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do stack</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os stacks</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Update</b> - Atualizar configurações do stack</summary>
+	</details>
+</details>
+
+<h3>📋 Registries</h3>
+📝 Gerenciamento de registries de imagens Docker com suporte a múltiplos tipos incluindo DockerHub, ECR, Azure, GitLab e registries customizados.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novos registries</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar registries</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do registry</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os registries</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Update</b> - Atualizar configurações do registry</summary>
+	</details>
+</details>
+
+<h3>👥 Teams</h3>
+📝 Gerenciamento de equipes no Portainer para controle de acesso baseado em grupos e permissões colaborativas.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novas equipes</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar equipes</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas da equipe</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todas as equipes</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Update</b> - Atualizar configurações da equipe</summary>
+	</details>
+</details>
+
+<h3>📄 Templates</h3>
+📝 Gerenciamento de templates de aplicação do Portainer para deployment rápido de aplicações pré-configuradas.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do template</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os templates</summary>
+	</details>
+</details>
+
+<h3>⚙️ Settings</h3>
+📝 Gerenciamento de configurações do Portainer incluindo autenticação, políticas de segurança e configurações globais da plataforma.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter configurações atuais</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Update</b> - Atualizar configurações</summary>
+	</details>
+</details>
+
+<h3>🔗 Webhooks</h3>
+📝 Gerenciamento de webhooks para automação e integração com sistemas externos através de notificações HTTP.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Create</b> - Criar novos webhooks</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar webhooks</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os webhooks</summary>
+	</details>
+</details>
+
+<h3>💻 System</h3>
+📝 Informações do sistema Portainer incluindo status, versão e informações dos nós para monitoramento da plataforma.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Get Status</b> - Obter status do sistema</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Version</b> - Obter versão do Portainer</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Nodes</b> - Obter informações dos nós</summary>
+	</details>
+</details>
+
+<h3>👤 Users</h3>
+📝 Gerenciamento de usuários do Portainer para controle de acesso e administração de contas.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do usuário</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os usuários</summary>
+	</details>
+</details>
+
+<h3>💾 Volumes</h3>
+📝 Gerenciamento de volumes Docker para persistência de dados e compartilhamento entre containers.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar volumes</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os volumes</summary>
+	</details>
+</details>
+
+<h3>🌐 Networks</h3>
+📝 Gerenciamento de redes Docker para conectividade e isolamento entre containers.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Delete</b> - Deletar redes</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todas as redes</summary>
+	</details>
+</details>
+
+<h3>🏢 Environments</h3>
+📝 Gerenciamento de ambientes/endpoints do Portainer para conexão com diferentes instâncias Docker.
+<br>
+<details>
+  <summary><b>Lista de operações</b></summary>
+	<details>
+  	<summary>   ✅ <b>Get</b> - Obter informações específicas do ambiente</summary>
+	</details>
+	<details>
+  	<summary>   ✅ <b>Get Many</b> - Listar todos os ambientes</summary>
+	</details>
+</details>
+
+<h1></h1>
+
+<h3>🚀 Instalação</h3>
+
+**Via n8n Community Nodes:**
+1. Abra sua instância do n8n
+2. Vá para **Settings** → **Community Nodes**
+3. Instale o pacote: `n8n-nodes-portainer`
+4. Reinicie o n8n
+
+**Via NPM:**
 ```bash
 npm install n8n-nodes-portainer
 ```
 
-### Instalar no n8n
+<h1></h1>
 
-1. **Via Interface n8n:**
-   - Vá para **Settings** > **Community Nodes**
-   - Adicione: `n8n-nodes-portainer`
+<h3>🤝 Contribuição</h3>
 
-2. **Via Docker:**
-   ```bash
-   docker run -it --rm \
-     --name n8n \
-     -p 5678:5678 \
-     -e N8N_CUSTOM_EXTENSIONS="/opt/custom" \
-     -v /local/path:/opt/custom \
-     n8nio/n8n:latest
-   ```
+Contribua para o crescimento deste projeto! Você pode ajudar de diversas formas:  
+- **Pull Requests**: Envie melhorias, correções ou novas funcionalidades.  
+- **Issues**: Relate problemas ou sugira novas ideias.  
+- **Sugestões**: Compartilhe suas opiniões e feedbacks.  
+- **Documentação**: Ajude a melhorar ou expandir a documentação existente.  
 
-3. **Via npm global:**
-   ```bash
-   npm install -g n8n-nodes-portainer
-   n8n start
-   ```
+<h1></h1>
 
-## 🔧 Configuração
-
-### 1. Obter Chave de API do Portainer
-
-1. Acesse sua instância do Portainer
-2. Vá para **User account** > **Access tokens**
-3. Clique em **Add access token**
-4. Copie o token gerado (ex: `ptr_xxxxxxxxxxxxxxxxxxxxxxxx`)
-
-### 2. Configurar Credenciais no n8n
-
-1. No n8n, adicione uma nova credencial **Portainer API**
-2. Configure:
-   - **Portainer URL**: `https://seu-portainer.com:9443`
-   - **API Key**: Cole seu token de acesso
-
-### 3. Adicionar Node ao Workflow
-
-1. Procure por **Portainer** na lista de nodes
-2. Arraste para seu workflow
-3. Configure o recurso e operação desejados
-
-## 📖 Exemplos de Uso
-
-### Listar Containers
-```javascript
-// Configuração do Node
-Resource: Container
-Operation: Get Many
-Environment ID: 1
-Include All: true
-```
-
-### Criar Container
-```javascript
-// Configuração do Node
-Resource: Container
-Operation: Create
-Environment ID: 1
-Container Name: "meu-nginx"
-Image: "nginx:latest"
-Port Bindings: "80:8080"
-Environment Variables: [
-  { name: "ENV", value: "production" }
-]
-```
-
-### Escalar Service Docker Swarm
-```javascript
-// Configuração do Node
-Resource: Service
-Operation: Scale
-Environment ID: 1
-Service ID: "abc123def456"
-Replicas: 5
-Version: 123
-```
-
-### Criar Edge Stack
-```javascript
-// Configuração do Node
-Resource: Edge Stack
-Operation: Create
-Edge Stack Name: "my-edge-app"
-Edge Group IDs: "1,2,3"
-Stack File Content: |
-  version: "3.8"
-  services:
-    web:
-      image: nginx:latest
-      ports:
-        - "80:80"
-```
-
-### Obter Logs de Container
-```javascript
-// Configuração do Node
-Resource: Container
-Operation: Get Logs
-Environment ID: 1
-Container ID: "abc123def456"
-Include Stdout: true
-Include Stderr: true
-Tail Lines: "100"
-Timestamps: true
-```
-
-## 🔗 Casos de Uso
-
-### CI/CD Pipeline
-- Deploy automático de aplicações
-- Gerenciamento de ambientes (dev/staging/prod)
-- Rollback automático em caso de falhas
-- Monitoramento de health checks
-
-### Monitoramento
-- Alertas baseados em métricas de containers
-- Logs centralizados
-- Status de services e stacks
-- Notificações de falhas
-
-### Edge Computing
-- Deploy distribuído em múltiplas localizações
-- Gerenciamento centralizado de edge nodes
-- Sincronização de configurações
-
-### Automação de Infraestrutura
-- Provisionamento automático de recursos
-- Backup e restore de configurações
-- Limpeza automática de recursos unused
-- Políticas de segurança automatizadas
-
-## 📚 Documentação da API
-
-Este node é baseado na [API oficial do Portainer 2.27.8](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.27.8).
-
-### Recursos Disponíveis
-
-| Recurso | Operações | Descrição |
-|---------|-----------|-----------|
-| **Containers** | 13 | Gerenciamento completo de containers Docker |
-| **Images** | 9 | Build, pull, push, tag e inspeção de imagens |
-| **Services** | 7 | Services Docker Swarm completos |
-| **Secrets** | 5 | Gerenciamento de segredos Swarm |
-| **Configs** | 5 | Configurações Docker Swarm |
-| **Edge Groups** | 5 | Grupos de edge computing |
-| **Edge Stacks** | 6 | Stacks distribuídos com status |
-| **Nodes** | 4 | Nós Docker Swarm |
-| **Stacks** | 4 | Stacks Docker Compose |
-| **Registries** | 5 | Registries de imagens |
-| **Teams** | 5 | Gerenciamento de equipes |
-| **Templates** | 2 | Templates de aplicação |
-| **Settings** | 2 | Configurações do Portainer |
-| **Webhooks** | 3 | Automação via webhooks |
-| **System** | 3 | Informações do sistema |
-| **Users** | 2 | Gerenciamento de usuários |
-| **Volumes** | 2 | Volumes Docker |
-| **Networks** | 2 | Redes Docker |
-| **Environments** | 2 | Ambientes/endpoints |
-
-## 🔧 Desenvolvimento
-
-### Pré-requisitos
-- Node.js 16+
-- npm
-- n8n instalado globalmente
-
-### Setup de Desenvolvimento
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/n8n-nodes-portainer.git
-cd n8n-nodes-portainer
-
-# Instale dependências
-npm install
-
-# Build do projeto
-npm run build
-
-# Link para desenvolvimento
-npm link
-cd ~/.n8n/custom
-npm link n8n-nodes-portainer
-
-# Inicie o n8n
-n8n start
-```
-
-### Estrutura do Projeto
-```
-n8n-nodes-portainer/
-├── credentials/
-│   └── PortainerApi.credentials.ts    # Credenciais da API
-├── nodes/
-│   └── Portainer/
-│       ├── Portainer.node.ts          # Node principal
-│       └── logo.svg                   # Ícone do node
-├── dist/                              # Arquivos compilados
-├── package.json                       # Configuração npm
-├── tsconfig.json                      # Configuração TypeScript
-└── README.md                          # Este arquivo
-```
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. Fork o repositório
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
-
-## 📋 Requisitos
-
-### Versões Compatíveis
-- **n8n**: 0.190.0+
-- **Node.js**: 16.0.0+
-- **Portainer**: 2.11.0+ (recomendado 2.27.8+)
-
-### Permissões Necessárias
-- Token de API do Portainer com permissões adequadas
-- Acesso de rede entre n8n e instância do Portainer
-- Permissões Docker conforme operações utilizadas
-
-## 🐛 Resolução de Problemas
-
-### Erro: "API-Server can not be reached"
-- Verifique se a URL do Portainer está correta
-- Confirme se o token de API é válido
-- Teste conectividade de rede
-
-### Erro: "Unauthorized"
-- Verifique se o token não expirou
-- Confirme permissões do usuário/token
-- Recrie o token se necessário
-
-### Erro: "Environment ID not found"
-- Liste ambientes disponíveis primeiro
-- Use ID correto do ambiente/endpoint
-- Verifique se ambiente está online
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 🆕 Changelog
-
-### [2.0.0] - 2024-01-XX
-- ✨ **GRANDE ATUALIZAÇÃO**: Cobertura 100% da API Portainer 2.27.8
-- 🚀 **14 novos recursos** implementados
-- 📈 **600% mais operações** (160+ vs 25 anteriores)
-- 🌐 **Edge Computing** completo
-- 🔄 **Docker Swarm** completo
-- 👥 **Administração** completa
-- 🔧 **80+ parâmetros** específicos
-
-### [1.0.1] - 2023-XX-XX
-- 🐳 Operações básicas de containers
-- 📦 Listagem de imagens, volumes, redes
-- 👤 Gerenciamento básico de usuários
-
-## 🔗 Links Úteis
-
-- [Documentação do n8n](https://docs.n8n.io/)
-- [API do Portainer](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.27.8)
-- [Documentação do Portainer](https://docs.portainer.io/)
-- [Comunidade n8n](https://community.n8n.io/)
-
-## 📞 Suporte
-
-- **Issues**: [GitHub Issues](https://github.com/seu-usuario/n8n-nodes-portainer/issues)
-- **Discussões**: [GitHub Discussions](https://github.com/seu-usuario/n8n-nodes-portainer/discussions)
-- **Comunidade n8n**: [Community Forum](https://community.n8n.io/)
-
----
-
-**Desenvolvido com ❤️ para a comunidade n8n** 
+<p align="center">
+Desenvolvido com ❤️ por <b>Ramon Matias</b>
+</p> 

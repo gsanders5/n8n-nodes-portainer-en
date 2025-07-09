@@ -1,11 +1,11 @@
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
 export class Portainer implements INodeType {
-	description: INodeTypeDescription = {
+	description: INodeTypeDescription & { usableAsTool?: boolean } = {
 		displayName: 'Portainer',
 		name: 'portainer',
 		icon: 'file:logo.svg',
-		group: ['transform'],
+		group: ['tool'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Trabalhe com dados da API do Portainer para gerenciar Docker',
@@ -14,6 +14,7 @@ export class Portainer implements INodeType {
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
+		usableAsTool: true,
 		credentials: [
 			{
 				name: 'portainerApi',

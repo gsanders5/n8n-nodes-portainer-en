@@ -5,6 +5,26 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 e este projeto adere ao [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2025-12-27
+
+### ✨ Added
+- **🤖 AI Agent Tool Support**: Node agora compatível como Tool no AI Agent do n8n
+  - **IMPLEMENTADO**: Propriedade `usableAsTool: true` na configuração do node
+  - **GRUPO ATUALIZADO**: Alterado de `['transform']` para `['tool']` para melhor categorização
+  - **COMPATIBILIDADE**: Funciona com versões recentes e nightly builds do n8n (≥ v1.79)
+  - **RECURSOS**: O node pode agora ser chamado diretamente pelo AI Agent como ferramenta
+  - **USO**: Aparecer na lista de ferramentas disponíveis no AI Agent Workflow
+
+### 🔧 Enhanced
+- **Categoria Otimizada**: Node agora aparece na categoria "Tool" para melhor descoberta
+- **AI Integration**: Preparado para uso em workflows automatizados com IA
+- **Estabilidade**: Estrutura limpa com roteamento estático compatível com AI Tools
+
+### 📋 Usage Notes
+- **Versão Necessária**: Requer n8n versão ≥ 1.79 ou nightly builds
+- **Instalação**: Reinstalar node após atualização para reconhecimento pelo AI Agent
+- **Configuração**: Reiniciar n8n após instalação para ativar funcionalidade de Tool
+
 ## [2.0.0] - 2024-01-XX
 
 ### ✨ GRANDE ATUALIZAÇÃO: Cobertura 100% da API Portainer 2.27.8
